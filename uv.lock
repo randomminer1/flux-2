@@ -155,7 +155,6 @@ dependencies = [
     { name = "edge-maxxing-pipelines" },
     { name = "hf-transfer" },
     { name = "omegaconf" },
-    { name = "para-attn" },
     { name = "protobuf" },
     { name = "sentencepiece" },
     { name = "torch" },
@@ -170,7 +169,6 @@ requires-dist = [
     { name = "edge-maxxing-pipelines", git = "https://github.com/womboai/edge-maxxing?subdirectory=pipelines&rev=7c760ac54f6052803dadb3ade8ebfc9679a94589" },
     { name = "hf-transfer", specifier = "==0.1.8" },
     { name = "omegaconf", specifier = "==2.3.0" },
-    { name = "para-attn", specifier = "==0.3.15" },
     { name = "protobuf", specifier = "==5.28.3" },
     { name = "sentencepiece", specifier = "==0.2.0" },
     { name = "torch", specifier = "==2.5.1" },
@@ -504,16 +502,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/51/65/50db4dda066951078
 wheels = [
     { url = "https://files.pythonhosted.org/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl", hash = "sha256:5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124", size = 53985 },
 ]
-
-[[package]]
-name = "para-attn"
-version = "0.3.15"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "packaging" },
-    { name = "torch" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/08/24/dbdc4469b34dc61b7a923ac3ff233da979f359d2f27f5115c4fc259bf713/para_attn-0.3.15.tar.gz", hash = "sha256:0294f7402e567bee360db379e8f9a93c34bceb2c4da0d5ee3f48120d81dc3ed2", size = 8023745 }
 
 [[package]]
 name = "pillow"

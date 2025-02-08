@@ -9,11 +9,8 @@ from huggingface_hub.constants import HF_HUB_CACHE
 from pipelines.models import TextToImageRequest
 from torch import Generator
 from transformers import T5EncoderModel, CLIPTextModel
-from para_attn.first_block_cache.diffusers_adapters import apply_cache_on_pipe
 
 Pipeline: TypeAlias = FluxPipeline
-
-os.environ['PYTORCH_CUDA_ALLOC_CONF']="expandable_segments:True"
 
 CHECKPOINT = "black-forest-labs/FLUX.1-schnell"
 REVISION = "741f7c3ce8b383c54771c7003378a50191e9efe9"
@@ -62,7 +59,6 @@ def load_pipeline() -> Pipeline:
         vae=vae,
         torch_dtype=torch.bfloat16,
     ).to("cuda")
-    apply_cache_on_pipe(pipeline, residual_diff_threshold=0.5)
 
     pipeline("")
 
